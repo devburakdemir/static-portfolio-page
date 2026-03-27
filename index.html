@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burak Demir</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Footer'daki sosyal medya ikonları için -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -24,142 +22,163 @@
 
     <nav class="top-nav">
       <ul>
-        <li><a href="#about">Hakkımda</a></li>
-        <li><a href="#experiences">Deneyim</a></li>
-        <li><a href="#projects">Projelerim</a></li>
-        <li><a href="#contact">İletişim</a></li>
+        <li><a href="#about" data-section="about">Hakkımda</a></li>
+        <li><a href="#experiences" data-section="experiences">Deneyim</a></li>
+        <li><a href="#projects" data-section="projects">Projelerim</a></li>
+        <li><a href="#contact" data-section="contact">İletişim</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="content">
-    <section id="about">
-      <div class="profile">
-        <img
-          src="https://avatars.githubusercontent.com/u/157283828?v=4"
-          alt="Burak Demir"
-          class="profile-img"
-        >
-      </div>
-      <h2>Hakkımda</h2>
-      <p>
-       Merhaba, ben Burak Demir. Düzce Üniversitesi Bilgisayar Mühendisliği mezunuyum. Yazılım geliştirme, donanım-yazılım entegrasyonu ve proje tabanlı çalışmalarda aktif rol aldım. Farklı teknolojilerle masaüstü, web, mobil
-ve IoT projeleri geliştirdim. Analitik düşünebilen, öğrenmeye açık ve ekip çalışmasına yatkın bir
-geliştirici olarak kendimi sürekli geliştirmeyi hedefliyorum.
-      </p>
-    </section>
+    <div class="sections-scene" id="sectionsScene">
 
-    <section id="experiences">
-      <h2>Deneyim</h2>
-
-      <div class="experience-item">
-        <div class="experience-header">
-          <h3>ATM - Kiosk Uygulamaları Stajyeri, Cubetron Yazılım</h3>
-          <h4>Eyl 2025 - Eki 2025</h4>
+      <section id="about" class="panel-section active-panel" data-index="0">
+        <div class="profile">
+          <img
+            src="https://avatars.githubusercontent.com/u/157283828?v=4"
+            alt="Burak Demir"
+            class="profile-img"
+          >
         </div>
-        <ul>
-          <li>Excel veri setindeki ATM hata kodlarını MySQL veritabanına aktardım ve tablo yapısını optimize ettim.</li>
-          <li>Java, Spring, Hibernate, Maven, Tomcat kullanarak rol tabanlı hata yönetimi web uygulaması geliştirdim.</li>
-          <li>Admin için CRUD, kullanıcı için read-only erişim içeren role-based authorization yapısı kurdum.</li>
-          <li>MVC mimarisi, veritabanı entegrasyonu ve backend geliştirme süreçlerinde aktif rol aldım.</li>
-        </ul>
-      </div>
+        <h2>Hakkımda</h2>
+        <p>
+          Merhaba, ben Burak Demir. Düzce Üniversitesi Bilgisayar Mühendisliği mezunuyum.
+          Yazılım geliştirme, donanım-yazılım entegrasyonu ve proje tabanlı çalışmalarda aktif rol aldım.
+          Farklı teknolojilerle masaüstü, web, mobil ve IoT projeleri geliştirdim.
+          Analitik düşünebilen, öğrenmeye açık ve ekip çalışmasına yatkın bir geliştirici olarak
+          kendimi sürekli geliştirmeyi hedefliyorum.
+        </p>
+      </section>
 
-      <div class="experience-item">
-        <div class="experience-header">
-          <h3>Ar-Ge Stajyeri, Yeşil Otomasyon</h3>
-          <h4>Ağu 2024 - Eyl 2024</h4>
-        </div>
-        <ul>
-          <li>Raspberry Pi 4 üzerinde çalışan Linux tabanlı veri toplama servisleri geliştirdim.</li>
-          <li>Donanım metriklerini Bluetooth socket ile Kotlin Android uygulamasına gerçek zamanlı aktardım.</li>
-          <li>Linux terminal, servis yönetimi ve dosya sistemi üzerinde çalışarak sistem entegrasyonu sağladım.</li>
-          <li>Veri aktarım kararlılığı ve bağlantı performansı için optimizasyon yaptım.</li>
-        </ul>
-      </div>
-    </section>
+      <section id="experiences" class="panel-section" data-index="1">
+        <h2>Deneyim</h2>
 
-    <section id="projects">
-      <h2>Projelerim</h2>
-      <p>...</p>
-    </section>
-
-    <section id="contact">
-      <h2>İletişim</h2>
-
-      <form
-        class="contact-form"
-        action="https://formspree.io/f/xgopowjz"
-        method="POST"
-      >
-        <div class="form-grid">
-          <div class="input-group">
-            <input
-              type="text"
-              name="fullName"
-              placeholder="İsim Soyisim"
-              required
-            >
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>ATM - Kiosk Uygulamaları Stajyeri, Cubetron Yazılım</h3>
+            <h4>Eyl 2025 - Eki 2025</h4>
           </div>
-
-          <div class="input-group">
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Telefon Numarası"
-            >
-          </div>
-
-          <div class="input-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="E-posta Adresi"
-              required
-            >
-          </div>
-
-          <div class="input-group input-group-full">
-            <textarea
-              name="message"
-              placeholder="İletmek istediğiniz mesajı yazın..."
-              required
-            ></textarea>
-          </div>
+          <ul>
+            <li>Excel veri setindeki ATM hata kodlarını MySQL veritabanına aktardım ve tablo yapısını optimize ettim.</li>
+            <li>Java, Spring, Hibernate, Maven, Tomcat kullanarak rol tabanlı hata yönetimi web uygulaması geliştirdim.</li>
+            <li>Admin için CRUD, kullanıcı için read-only erişim içeren role-based authorization yapısı kurdum.</li>
+            <li>MVC mimarisi, veritabanı entegrasyonu ve backend geliştirme süreçlerinde aktif rol aldım.</li>
+          </ul>
         </div>
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="Portfolyo sitesinden yeni mesaj"
-        >
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>Ar-Ge Stajyeri, Yeşil Otomasyon</h3>
+            <h4>Ağu 2024 - Eyl 2024</h4>
+          </div>
+          <ul>
+            <li>Raspberry Pi 4 üzerinde çalışan Linux tabanlı veri toplama servisleri geliştirdim.</li>
+            <li>Donanım metriklerini Bluetooth socket ile Kotlin Android uygulamasına gerçek zamanlı aktardım.</li>
+            <li>Linux terminal, servis yönetimi ve dosya sistemi üzerinde çalışarak sistem entegrasyonu sağladım.</li>
+            <li>Veri aktarım kararlılığı ve bağlantı performansı için optimizasyon yaptım.</li>
+          </ul>
+        </div>
+      </section>
 
-        <button type="submit" class="send-btn">Gönder</button>
-      </form>
-    </section>
-  </main>
+      <section id="projects" class="panel-section" data-index="2">
+        <h2>Projelerim</h2>
 
-  <footer class="site-footer">
-    <div class="social-links">
-      <a
-        href="https://github.com/devburakdemir"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-      >
-        <i class="fa-brands fa-github"></i>
-      </a>
+        <div class="projects-item">
+          <div class="projects-header">
+            <h3>Kurum Arıza Takip Sistemi, Düzce Üniversitesi</h3>
+            <h4>2025</h4>
+          </div>
+            <p>Kullandığım teknolojiler: Java, Spring Framework, Maven, Hibernate, Tomcat, MySQL, Intellij IDEA</p>
+        </div>
 
-      <a
-        href="https://www.linkedin.com/in/burak-demir-dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-      >
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
+        <div class="projects-item">
+          <div class="projects-header">
+            <h3> IoT Tabanlı Kuru Bakliyat Bozuntu Tespit Sistemi, Düzce Üniversitesi</h3>
+            <h4>2024-2025</h4>
+          </div>
+            <p>Kullandığım teknolojiler: ESP8266, MQ-135, MQTT, Docker, Node-RED, Grafana, Adafruit IO</p>
+        </div>
+
+        <div class="projects-item">
+          <div class="projects-header">
+            <h3> MVC Tabanlı Spor Salonu Otomasyonu, Düzce Üniversitesi</h3>
+            <h4>2024</h4>
+          </div>
+            <p>Kullandığım teknolojiler: C#, ASP.NET MVC, MS Access</p>
+        </div>
+
+        <div class="projects-item">
+          <div class="projects-header">
+            <h3> Katmanlı Spor Salonu Otomasyonu, Düzce Üniversitesi</h3>
+            <h4>2024</h4>
+          </div>
+            <p>Kullandığım teknolojiler: C#, MS SQL</p>
+        </div>
+
+      </section>
+
+<section id="contact" class="panel-section" data-index="3">
+  <h2>İletişim</h2>
+
+  <form
+    class="contact-form"
+    action="https://formspree.io/f/xgopowjz"
+    method="POST"
+  >
+    <div class="form-grid">
+      <div class="input-group">
+        <input type="text" name="fullName" placeholder="İsim Soyisim" required>
+      </div>
+
+      <div class="input-group">
+        <input type="tel" name="phone" placeholder="Telefon Numarası">
+      </div>
+
+      <div class="input-group">
+        <input type="email" name="email" placeholder="E-posta Adresi" required>
+      </div>
+
+      <div class="input-group input-group-full">
+        <textarea
+          name="message"
+          placeholder="İletmek istediğiniz mesajı yazın..."
+          required
+        ></textarea>
+      </div>
     </div>
-  </footer>
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="Portfolyo sitesinden yeni mesaj"
+    >
+
+    <div class="form-actions">
+      <button type="submit" class="send-btn">Gönder</button>
+
+      <div class="contact-socials">
+        <a
+          href="https://github.com/devburakdemir"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/burak-demir-dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </form>
+</section>
 
   <script src="script.js"></script>
 </body>
