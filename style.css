@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
   background:
     radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 35%),
-    linear-gradient(135deg, #4f5d2f 0%, #3f4a24 100%);
+    linear-gradient(135deg, #1b0e28 0%, #3a0513 100%);
   color: white;
   overflow: hidden; /* dikey scroll kapanıyor */
 }
@@ -23,8 +23,8 @@ body {
   align-items: center;
 
   padding: 18px 40px;
-  background-color: rgba(46, 54, 25, 0.82);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(39, 2, 62, 0.82);
+  border-bottom: 1px solid rgba(24, 4, 77, 0.08);
   backdrop-filter: blur(10px);
 }
 
