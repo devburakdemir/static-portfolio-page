@@ -1,0 +1,365 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #4f5d2f;
+  color: white;
+}
+
+/* HEADER / NAVBAR */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 40px;
+  background-color: rgba(46, 54, 25, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.site-title {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  min-width: 235px;
+  font-weight: 800;
+}
+
+/* Sabit duran çerçeve yazı */
+.title-outline {
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.95);
+}
+
+/* Demir kısmının outline rengi */
+.demir-dark {
+  color: transparent;
+  -webkit-text-stroke: 1.4px #1f2a0f;
+}
+
+/* İç dolgu katmanı */
+.title-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  pointer-events: none;
+}
+
+/* Demir kısmının iç dolgu rengi */
+.demir-dark-fill {
+  color: #d8e3b5;
+}
+
+.top-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: transparent;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible,
+.top-nav a:active {
+  background-color: rgba(0, 0, 0, 0.30);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #d8e3b5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CONTENT */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 35px;
+  padding: 30px;
+  background: #39441f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+
+/* EXPERIENCE */
+.experience-item + .experience-item {
+  margin-top: 28px;
+}
+
+.experience-header {
+  margin-bottom: 12px;
+}
+
+.experience-header h3 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+}
+
+.experience-header h4 {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #d8e3b5;
+}
+
+.experience-item ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.experience-item li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* PROFİL */
+.profile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+/* CONTACT FORM */
+.contact-form {
+  margin-top: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-group-full {
+  grid-column: 1 / -1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(110, 96, 67, 0.18);
+  background: #f4eddf;
+  color: #2d331d;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+.contact-form input {
+  min-height: 60px;
+}
+
+.contact-form textarea {
+  min-height: 230px;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #7f7868;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: #fbf6ea;
+  border-color: rgba(95, 108, 57, 0.35);
+  box-shadow: 0 0 0 5px rgba(95, 108, 57, 0.10);
+  transform: translateY(-1px);
+}
+
+/* SUBMIT BUTTON */
+.send-btn {
+  margin-top: 26px;
+  padding: 14px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.28);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.send-btn:hover {
+  background: rgba(0, 0, 0, 0.42);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.send-btn:active {
+  transform: translateY(0);
+}
+
+/* FOOTER */
+.site-footer {
+  padding: 30px 20px 40px;
+  background-color: rgba(46, 54, 25, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 30px;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.social-links a:hover {
+  color: #d8e3b5;
+  transform: translateY(-3px);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+
+  .top-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .site-title {
+    font-size: 24px;
+    min-width: 200px;
+  }
+}
+
+/* TELEFON */
+@media (max-width: 700px) {
+  .content {
+    padding: 30px 14px;
+  }
+
+  section {
+    padding: 22px;
+  }
+
+  .top-nav ul {
+    gap: 14px;
+  }
+
+  .top-nav a {
+    font-size: 15px;
+    padding: 8px 13px;
+  }
+
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .input-group-full {
+    grid-column: auto;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .contact-form textarea {
+    min-height: 210px;
+  }
+}
+  /* ABOUT SECTION ÖZEL STİL */
+#about h2 {
+  font-size: 34px; /* başlık büyütüldü */
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+#about p {
+  font-size: 18px;  /* paragraf büyütüldü */
+  line-height: 1.8; /* satır aralığı açıldı */
+  max-width: 800px; /* çok yayılmasını engeller */
+  margin: 0 auto;   /* ortalar */
+  text-align: center; /* daha estetik görünüm */
+}
